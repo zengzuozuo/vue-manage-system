@@ -18,17 +18,17 @@
 
 > React + Ant Design 的版本正在开发中，仓库地址：[react-manage-system](https://github.com/lin-xin/react-manage-system)
 
-[English document](https://github.com/zengzuozuo/vue-manage/blob/master/README_EN.md)
+[English document](https://github.com/zengzuozuo/vue-manage-system/blob/master/README_EN.md)
 
 ## 项目截图 ##
 ### 登录
-![Image text](https://github.com/zengzuozuo/vue-manage/blob/master/screenshots/wms3.png?raw=true)
+![Image text](https://github.com/zengzuozuo/vue-manage-system/blob/master/screenshots/wms3.png?raw=true)
 
 ### 默认皮肤 ###
-![Image text](https://github.com/zengzuozuo/vue-manage/blob/master/screenshots/wms1.png?raw=true)
+![Image text](https://github.com/zengzuozuo/vue-manage-system/blob/master/screenshots/wms1.png?raw=true)
 
 ### 浅绿色皮肤 ###
-![Image text](https://github.com/zengzuozuo/vue-manage/blob/master/screenshots/wms2.png?raw=true)
+![Image text](https://github.com/zengzuozuo/vue-manage-system/blob/master/screenshots/wms2.png?raw=true)
 
 ## 前言 ##
 由于工作中会频繁使用vue + elementUI进行后台管理系统的开发，所以也是从网上借鉴了一些好的项目再加上自己的一些内容做了这样一个通用的模板供自己使用。同时也欢迎大家根据自己的需求去使用并渴望大家能提出自己的宝贵意见以便于后续的改进。
@@ -58,7 +58,7 @@
 
 ## 安装步骤 ##
 ```
-git clone https://github.com/zengzuozuo/vue-manage.git      // 把模板下载到本地
+git clone https://github.com/zengzuozuo/vue-manage-system.git      // 把模板下载到本地
 cd vue-manage-system    // 进入模板目录
 npm install         // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
 
