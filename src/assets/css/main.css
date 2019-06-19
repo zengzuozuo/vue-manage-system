@@ -14,6 +14,7 @@ body,
 
 body {
     font-family: 'PingFang SC', "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+    color: #323232;
 }
 
 a {
@@ -23,7 +24,7 @@ a {
 
 .content-box {
     position: absolute;
-    left: 250px;
+    left: 220px;
     right: 0;
     top: 70px;
     bottom: 0;

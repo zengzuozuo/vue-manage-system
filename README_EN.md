@@ -1,9 +1,6 @@
 # vue-manage-system #
 The web management system solution based on Vue2 and Element-UI。[live demo](http://blog.gdfengshuo.com/example/work/)
 
-## Donation
-![WeChat](http://blog.gdfengshuo.com/images/weixin.jpg)
-
 ## Preface ##
 The scheme as a set of multi-function background frame templates, suitable for most of the WEB management system development. Convenient development fast simple good components based on Vue2 and Element-UI. Color separation of color style, support manual switch themes, and it is convenient to use a custom theme color.
 
@@ -28,7 +25,7 @@ The scheme as a set of multi-function background frame templates, suitable for m
 
 ## Installation steps ##
 
-	git clone https://github.com/lin-xin/vue-manage-system.git		// Clone templates
+	git clone https://github.com/zengzuozuo/vue-manage.git		// Clone templates
 	cd vue-manage-system											// Enter template directory
 	npm install													// Installation dependency
 
@@ -42,50 +39,6 @@ The scheme as a set of multi-function background frame templates, suitable for m
 	// Constructing project
 	npm run build
 
-## Component description and presentation ##
-
-### vue-schart ###
-Vue.js wrapper for sChart.js. Github : [vue-schart](https://github.com/linxin/vue-schart)
-
-```JavaScript
-<template>
-    <div>
-        <schart :canvasId="canvasId"
-				:type="type"
-				:width="width"
-				:height="height"
-				:data="data"
-				:options="options"
-		></schart>
-    </div>
-</template>
-	
-<script>
-    import Schart from 'vue-schart';
-    export default {
-        data: function(){
-            return {
-                canvasId: 'myCanvas',
-                type: 'bar',
-                width: 500,
-                height: 400,
-                data: [
-                    {name: '2014', value: 1342},
-                    {name: '2015', value: 2123},
-                    {name: '2016', value: 1654},
-                    {name: '2017', value: 1795},
-                ],
-                options: {
-                    title: 'Total sales of stores in recent years'
-                }
-            }
-        },
-        components: {
-            Schart
-        }
-    }
-</script>
-```
 
 ### element-ui ###
 A desktop component library based on vue.js2.0 . Github : [element](http://element.eleme.io/#/zh-CN/component/layout)
@@ -153,12 +106,8 @@ Finally,enter 'src/components/common/Sidebar.vue' and find el-menu Tags,delete '
 ## Screenshot ##
 ### Default theme ###
 
-![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms1.png)
+![Image text](https://github.com/zengzuozuo/vue-manage/blob/master/screenshots/wms1.png)
 
 ### Green theme ###
 
-![Image text](https://github.com/lin-xin/manage-system/raw/master/screenshots/wms2.png)
-
-## License
-
-[MIT](https://github.com/lin-xin/vue-manage-system/blob/master/LICENSE)
+![Image text](https://github.com/zengzuozuo/vue-manage/blob/master/screenshots/wms2.png)

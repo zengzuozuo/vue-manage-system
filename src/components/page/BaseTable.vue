@@ -15,7 +15,7 @@
                 <el-input v-model="select_word" placeholder="筛选关键词" class="handle-input mr10"></el-input>
                 <el-button type="primary" icon="search" @click="search">搜索</el-button>
             </div>
-            <el-table :data="data" border class="table" ref="multipleTable" @selection-change="handleSelectionChange">
+            <el-table :data="data" border class="table" ref="multipleTable" @selection-change="handleSelectionChange" size="mini">
                 <el-table-column type="selection" width="55" align="center"></el-table-column>
                 <el-table-column prop="date" label="日期" sortable width="150">
                 </el-table-column>

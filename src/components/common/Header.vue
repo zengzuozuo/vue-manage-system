@@ -36,7 +36,7 @@
                     <span class="btn-bell-badge" v-if="message"></span>
                 </div>
                 <!-- 用户头像 -->
-                <div class="user-avator"><img src="../../assets/img/img.jpg"></div>
+                <div class="user-avator"><img src="../../assets/img/admin.png"></div>
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
@@ -125,7 +125,7 @@
         }
     }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     @headerH: 70px;
     .header {
         position: relative;
@@ -134,7 +134,7 @@
         height: 70px;
         font-size: 22px;
         color: #fff;
-        .header-menu {
+        /deep/.header-menu {
             float: left;
             height: 100%;
             background-color: transparent;
@@ -213,7 +213,7 @@
         display: block;
         width:40px;
         height:40px;
-        border-radius: 50%;
+        border-radius: 4px;
     }
     .el-dropdown-link{
         color: #fff;

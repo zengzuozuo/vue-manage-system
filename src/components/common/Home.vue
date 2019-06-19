@@ -5,11 +5,13 @@
         <div class="content-box" :class="{'content-collapse':collapse}">
             <v-tags></v-tags>
             <div class="content">
-                <transition name="move" mode="out-in">
+                <!--<transition name="move" mode="out-in">-->
+                <el-collapse-transition>
                     <keep-alive :include="tagsList">
                         <router-view></router-view>
                     </keep-alive>
-                </transition>
+                </el-collapse-transition>
+                <!--</transition>-->
             </div>
         </div>
     </div>

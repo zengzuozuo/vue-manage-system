@@ -1,23 +1,35 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-login">
-            <div class="ms-title">后台管理系统</div>
-            <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="ms-content">
-                <el-form-item prop="username">
-                    <el-input v-model="ruleForm.username" placeholder="username">
-                        <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
-                    </el-input>
-                </el-form-item>
-                <el-form-item prop="password">
-                    <el-input type="password" placeholder="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')">
-                        <el-button slot="prepend" icon="el-icon-lx-lock"></el-button>
-                    </el-input>
-                </el-form-item>
-                <div class="login-btn">
-                    <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+        <header>
+            <div class="flex-wrap">
+                <div class="logo">
+                    <h3>后台管理系统</h3>
                 </div>
-                <p class="login-tips">Tips : 用户名和密码随便填。</p>
-            </el-form>
+                <div class="link">
+                    <a href="javascript:;">开发者中心</a>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="confine">
+                <div class="ms-login">
+                    <div class="ms-title">商户后台 <span class="primary-ft-c">登录</span></div>
+                    <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px" class="ms-content">
+                        <el-form-item prop="username">
+                            <el-input v-model="ruleForm.username" placeholder="username" autofocus></el-input>
+                        </el-form-item>
+                        <el-form-item prop="password">
+                            <el-input type="password" placeholder="password" v-model="ruleForm.password" @keyup.enter.native="submitForm('ruleForm')"></el-input>
+                        </el-form-item>
+                        <div class="login-btn">
+                            <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+                        </div>
+                        <div class="other">
+                            <el-checkbox v-model="checked">保持登录状态</el-checkbox>
+                        </div>
+                    </el-form>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -37,7 +49,8 @@
                     password: [
                         { required: true, message: '请输入密码', trigger: 'blur' }
                     ]
-                }
+                },
+                checked: false
             }
         },
         methods: {
@@ -56,34 +69,83 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+    @confineWidth: 1000px;
     .login-wrap{
         position: relative;
         width:100%;
         height:100%;
-        background-image: url(../../assets/img/login-bg.jpg);
-        background-size: 100%;
+        header {
+            background-color: #fff;
+            .flex-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 80px;
+                max-width: @confineWidth;
+                box-sizing: border-box;
+                padding: 0 10px;
+                margin: 0 auto;
+                .logo {
+                    color: #1890FF;
+                    font-size: 20px;
+                    h3 {
+                        font-weight: 500;
+                    }
+                }
+                .link {
+                    a {
+                        color: #323232;
+                        font-size: 18px;
+                        font-weight: 500;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .main {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 80px);
+            background: url(../../../public/img/login_bg.png) no-repeat center;
+            background-size: cover;
+            .confine {
+                position: relative;
+                max-width: @confineWidth;
+                height: 100%;
+                margin: 0 auto;
+                .ms-title{
+                    width:100%;
+                    line-height: 50px;
+                    font-size:20px;
+                    color: #000;
+                    padding: 0 30px;
+                }
+                .other {
+                    text-align: center;
+                    margin: 10px 0;
+                }
+            }
+        }
     }
-    .ms-title{
-        width:100%;
-        line-height: 50px;
-        text-align: center;
-        font-size:20px;
-        color: #fff;
-        border-bottom: 1px solid #ddd;
-    }
+    
     .ms-login{
         position: absolute;
-        left:50%;
+        right: 10px;
         top:50%;
-        width:350px;
-        margin:-190px 0 0 -175px;
-        border-radius: 5px;
-        background: rgba(255,255,255, 0.3);
+        width: 350px;
+        margin:-190px 0 0 0;
+        border-radius: 2px;
+        background: #fff;
         overflow: hidden;
+        padding: 10px 0;
     }
     .ms-content{
-        padding: 30px 30px;
+        padding: 10px 30px 0 30px;
     }
     .login-btn{
         text-align: center;

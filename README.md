@@ -18,7 +18,7 @@
 
 > React + Ant Design 的版本正在开发中，仓库地址：[react-manage-system](https://github.com/lin-xin/react-manage-system)
 
-[English document](https://github.com/lin-xin/manage-system/blob/master/README_EN.md)
+[English document](https://github.com/zengzuozuo/vue-manage/blob/master/README_EN.md)
 
 ## 项目截图 ##
 ### 登录
@@ -58,7 +58,7 @@
 
 ## 安装步骤 ##
 ```
-git clone https://github.com/lin-xin/vue-manage-system.git      // 把模板下载到本地
+git clone https://github.com/zengzuozuo/vue-manage.git      // 把模板下载到本地
 cd vue-manage-system    // 进入模板目录
 npm install         // 安装项目依赖，等待安装完成之后，安装失败可用 cnpm 或 yarn
 
@@ -67,54 +67,6 @@ npm run serve
 
 // 执行构建命令，生成的dist文件夹放在服务器下即可访问
 npm run build
-```
-## 组件使用说明与演示 ##
-
-### vue-schart ###
-vue.js封装sChart.js的图表组件。访问地址：[vue-schart](https://github.com/linxin/vue-schart)
-<p><a href="https://www.npmjs.com/package/vue-schart"><img src="https://img.shields.io/npm/dm/vue-schart.svg" alt="Downloads"></a></p>
-
-```html
-<template>
-    <div>
-        <schart  class="wrapper"
-				:canvasId="canvasId"
-				:type="type"
-				:data="data"
-				:options="options"
-		></schart>
-    </div>
-</template>
-	
-<script>
-    import Schart from 'vue-schart';        // 导入Schart组件
-    export default {
-        data: function(){
-            return {
-                canvasId: 'myCanvas',       // canvas的id
-                type: 'bar',                // 图表类型
-                data: [
-                    {name: '2014', value: 1342},
-                    {name: '2015', value: 2123},
-                    {name: '2016', value: 1654},
-                    {name: '2017', value: 1795},
-                ],
-                options: {                  // 图表可选参数
-                    title: 'Total sales of stores in recent years'
-                }
-            }
-        },
-        components: {
-            Schart
-        }
-    }
-</script>
-<style>
-.wrapper{
-	width: 7rem;
-	height: 5rem;
-}
-</style>
 ```
 
 ## 其他注意事项 ##
